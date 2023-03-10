@@ -1,5 +1,11 @@
 # docs
 
+## 0.0.2
+
+### Patch Changes
+
+- 0fcf0d5: I updated the docs to get a release rolling
+
 ## 0.0.1
 
 ### Patch Changes
