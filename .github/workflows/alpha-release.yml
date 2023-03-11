@@ -58,9 +58,7 @@ jobs:
           # get first 7 characters of sha
           SHORT_SHA=${SHA::7}
           # yyyyMMdd format (e.g. 20221207)
-          DATE=$(date '+%Y%m%d')
-          # v0.0.0-next-<short sha>-<date>
-          NEXT_VERSION=0.0.0-next-${SHORT_SHA}-${DATE}
+          NEXT_VERSION=0.0.0-next-${SHORT_SHA}
           # set output so it can be used in other jobs
           echo "NEXT_VERSION=${NEXT_VERSION}" >> $GITHUB_OUTPUT
 
@@ -69,8 +67,8 @@ jobs:
         run: |
           git config --local user.email "hello@remix.run"
           git config --local user.name "Remix Run Bot"
-          git checkout -b next/${{ steps.version.outputs.NEXT_VERSION }}
-          pnpm changeset version ${{steps.version.outputs.NEXT_VERSION}} --skip-prompt
+          git checkout -B next/${{ steps.version.outputs.NEXT_VERSION }}
+          pnpm changeset version --snapshot ${{steps.version.outputs.NEXT_VERSION}}
         # git push origin --tags
 
       - name: 🏗 Build
