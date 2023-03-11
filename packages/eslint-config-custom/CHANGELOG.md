@@ -1,5 +1,11 @@
 # eslint-config-custom
 
+## 0.0.3
+
+### Patch Changes
+
+- 76ea279: yet another change to test snapshots
+
 ## 0.0.2
 
 ### Patch Changes
