@@ -1,12 +1,7 @@
 {
   "name": "@lordofthecactus/tsconfig",
-<<<<<<< Updated upstream
   "version": "0.0.2",
-  "private": true,
-=======
-  "version": "0.0.1",
   "private": false,
->>>>>>> Stashed changes
   "files": [
     "base.json",
     "nextjs.json",
