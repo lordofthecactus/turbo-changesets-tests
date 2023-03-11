@@ -67,7 +67,7 @@ jobs:
           git config --local user.email "hello@remix.run"
           git config --local user.name "Remix Run Bot"
           git checkout -b next/${{ steps.version.outputs.NEXT_VERSION }}
-          pnpm run changeset version ${{steps.version.outputs.NEXT_VERSION}} --skip-prompt
+          pnpm run changeset -- version ${{steps.version.outputs.NEXT_VERSION}} --skip-prompt
         # git push origin --tags
 
       - name: 🏗 Build
