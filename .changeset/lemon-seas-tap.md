@@ -1,9 +1,0 @@
----
-"@lordofthecactus/docs": patch
-"@lordofthecactus/web": patch
-"@lordofthecactus/eslint-config-custom": patch
-"@lordofthecactus/tsconfig": patch
-"@lordofthecactus/ui": patch
----
-
-Updateeeeed
