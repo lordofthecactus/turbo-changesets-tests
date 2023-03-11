@@ -1,5 +1,5 @@
 {
-  "name": "turbo-changesets-tests",
+  "name": "@lordofthecactus/turbo-changesets-tests",
   "version": "0.0.0",
   "private": true,
   "workspaces": [
