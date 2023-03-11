@@ -58,7 +58,7 @@ jobs:
           # get first 7 characters of sha
           SHORT_SHA=${SHA::7}
           # yyyyMMdd format (e.g. 20221207)
-          NEXT_VERSION=0.0.0-next-${SHORT_SHA}
+          NEXT_VERSION=next-${SHORT_SHA}
           # set output so it can be used in other jobs
           echo "NEXT_VERSION=${NEXT_VERSION}" >> $GITHUB_OUTPUT
 
