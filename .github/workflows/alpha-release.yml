@@ -1,6 +1,6 @@
 name: 🦙 Alpha Release
 
-on:
+ on:
   push:
     branches:
       - main
@@ -47,7 +47,7 @@ jobs:
           git config --local user.email "daniel.riospavia@shopify.com"
           git config --local user.name "Lordofthecactus Run Bot"
           git checkout -B next/${{ steps.version.outputs.NEXT_VERSION }}
-          npm changeset version --snapshot ${{steps.version.outputs.NEXT_VERSION}}
+          npm run changeset -- version --snapshot ${{steps.version.outputs.NEXT_VERSION}}
         # git push origin --tags
 
       - name: 🏗 Build
