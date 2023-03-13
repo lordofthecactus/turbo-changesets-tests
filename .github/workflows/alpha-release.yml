@@ -1,6 +1,6 @@
 name: 🦙 Alpha Release
 
- on:
+on:
   push:
     branches:
       - main
