@@ -14,7 +14,8 @@
     "changeset": "changeset"
   },
   "devDependencies": {
-    "eslint-config-custom": "*",
+    "@lordofthecactus/tsconfig": "*",
+    "@lordofthecactus/eslint-config-custom": "*",
     "prettier": "latest",
     "turbo": "latest"
   },
