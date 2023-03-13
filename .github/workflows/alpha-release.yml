@@ -13,6 +13,10 @@ jobs:
       # allows this to be used in the `comment` job below - will be undefined if there's no release necessary
       NEXT_VERSION: ${{ steps.version.outputs.NEXT_VERSION }}
     steps:
+      - name: I'm just doing something here
+        run: |
+        echo "this is a test"
+
       - name: 🛑 Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.11.0
 
@@ -48,7 +52,6 @@ jobs:
           git config --local user.name "Lordofthecactus Run Bot"
           git checkout -B next/${{ steps.version.outputs.NEXT_VERSION }}
           npm run changeset -- version --snapshot ${{steps.version.outputs.NEXT_VERSION}}
-          git push origin --tags
 
       - name: 🏗 Build
         if: steps.version.outputs.NEXT_VERSION
