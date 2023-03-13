@@ -48,7 +48,7 @@ jobs:
           git config --local user.name "Lordofthecactus Run Bot"
           git checkout -B next/${{ steps.version.outputs.NEXT_VERSION }}
           npm run changeset -- version --snapshot ${{steps.version.outputs.NEXT_VERSION}}
-        # git push origin --tags
+          git push origin --tags
 
       - name: 🏗 Build
         if: steps.version.outputs.NEXT_VERSION
