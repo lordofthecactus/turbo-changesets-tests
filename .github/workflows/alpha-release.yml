@@ -26,29 +26,8 @@ jobs:
         with:
           node-version: 16
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        id: pnpm-install
-        with:
-          version: 7
-          run_install: false
-
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
-
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
-        with:
-          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-
       - name: Install dependencies
-        run: pnpm install
+        run: npm install
 
       - name: 🕵️ Check for changes
         id: version
@@ -65,15 +44,15 @@ jobs:
       - name: ⤴️ Update version
         if: steps.version.outputs.NEXT_VERSION
         run: |
-          git config --local user.email "hello@remix.run"
-          git config --local user.name "Remix Run Bot"
+          git config --local user.email "daniel.riospavia@shopify.com"
+          git config --local user.name "Lordofthecactus Run Bot"
           git checkout -B next/${{ steps.version.outputs.NEXT_VERSION }}
-          pnpm changeset version --snapshot ${{steps.version.outputs.NEXT_VERSION}}
+          npm changeset version --snapshot ${{steps.version.outputs.NEXT_VERSION}}
         # git push origin --tags
 
       - name: 🏗 Build
         if: steps.version.outputs.NEXT_VERSION
-        run: pnpm build
+        run: npm run build
 
       - name: 🔐 Setup npm auth
         if: steps.version.outputs.NEXT_VERSION
@@ -83,4 +62,4 @@ jobs:
 
       - name: 🚀 Publish
         if: steps.version.outputs.NEXT_VERSION
-        run: pnpm changeset publish --tag next
+        run: npm run changeset -- publish --tag next
