@@ -5,7 +5,7 @@ on:
     branches:
       - main
     # deploy if changelog did not change
-    path:
+    paths:
      - '**/*'
      # don't run if changelog was updated. This means a release is happenning.
      - '!**/CHANGELOG.md'
