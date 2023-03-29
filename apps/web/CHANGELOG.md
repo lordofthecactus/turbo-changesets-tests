@@ -1,5 +1,14 @@
 # web
 
+## 0.0.6
+
+### Patch Changes
+
+- 5177b56: another bump
+- Updated dependencies [5177b56]
+  - @lordofthecactus/tsconfig@0.0.5
+  - @lordofthecactus/ui@0.1.2
+
 ## 0.0.5
 
 ### Patch Changes
