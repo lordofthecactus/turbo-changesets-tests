@@ -1,5 +1,14 @@
 # docs
 
+## 0.0.5
+
+### Patch Changes
+
+- 36ad379: Change to npm
+- Updated dependencies [36ad379]
+- Updated dependencies [86dd563]
+  - @lordofthecactus/ui@0.1.0
+
 ## 0.0.4
 
 ### Patch Changes
