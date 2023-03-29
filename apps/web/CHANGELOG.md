@@ -1,5 +1,14 @@
 # web
 
+## 0.0.5
+
+### Patch Changes
+
+- 5c22b04: Fake update
+- Updated dependencies [5c22b04]
+  - @lordofthecactus/tsconfig@0.0.4
+  - @lordofthecactus/ui@0.1.1
+
 ## 0.0.4
 
 ### Patch Changes
