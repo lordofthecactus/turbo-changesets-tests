@@ -5,13 +5,14 @@ on:
     branches:
       - main
     # deploy if changelog did not change
-    paths:
-     - '**/*'
-     # don't run if changelog was updated. This means a release is happenning.
-     - '!**/CHANGELOG.md'
+    # paths:
+    #  - '**/*'
+    #  # don't run if changelog was updated. This means a release is happening.
+    #  - '!**/CHANGELOG.md'
 
 jobs:
   alpha-release:
+    if: "!contains(github.event.commits.*.message, 'Version Packages')"
     name: 🦙 Alpha Release
     runs-on: ubuntu-latest
     outputs:
