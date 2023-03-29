@@ -5,8 +5,10 @@ on:
     branches:
       - main
     # deploy if changelog did not change
-    paths-ignore:
-      - CHANGELOG.md
+    path:
+     - '**/*'
+     # don't run if changelog was updated. This means a release is happenning.
+     - '!**/CHANGELOG.md'
 
 jobs:
   alpha-release:
