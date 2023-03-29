@@ -12,7 +12,7 @@ on:
 
 jobs:
   alpha-release:
-    if: "!contains(github.event.commits.*.message, 'Version Packages')"
+    if: "github.repository_owner == 'lordofthecactus' && !contains(github.event.commits.*.message, 'Version Packages')"
     name: 🦙 Alpha Release
     runs-on: ubuntu-latest
     outputs:
