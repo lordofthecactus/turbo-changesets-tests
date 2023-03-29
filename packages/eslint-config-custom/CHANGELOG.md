@@ -1,5 +1,11 @@
 # eslint-config-custom
 
+## 0.0.5
+
+### Patch Changes
+
+- 5177b56: another bump
+
 ## 0.0.4
 
 ### Patch Changes
