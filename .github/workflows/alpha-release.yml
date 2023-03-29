@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+    # deploy if changelog did not change
+    paths-ignore:
+      - CHANGELOG.md
 
 jobs:
   alpha-release:
