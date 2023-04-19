@@ -1,5 +1,12 @@
 # web
 
+## 0.0.7
+
+### Patch Changes
+
+- f599713: Fake web update
+- 19c4140: will this be deleted
+
 ## 0.0.6
 
 ### Patch Changes
